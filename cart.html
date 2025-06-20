@@ -10,18 +10,30 @@
       border-radius:5px;
       padding:4px 8px 4px 8px;
       border:1px solid black;
+      transition:background-color 0.1s linear;
+
     }
+   button:active{
+    background-color: blue;
+   }
+  
   </style>
 
-  <script>
 
+  <script>
+     let cartQuantity = 0;
   </script>
 
 </head>
 <body style="background-color:rgb(88,88,88)">
+  <button class="b5" onClick="console.log('Cart Quantity : '+ cartQuantity);">Show quantity</button>
+
   <button class="b1">Add to cart</button>
-  <button class="b2">+5</button>
-  <button class="b3">+10</button>
-  <button class="b4">Reset cart</button>
+
+  <button class="b2" onClick="cartQuantity=cartQuantity+1" >+1</button>
+
+  <button class="b3"  onClick="cartQuantity=cartQuantity+10">+10</button>
+
+  <button class="b4" onClick="cartQuantity=0">Reset cart</button>
 </body>
 </html>
