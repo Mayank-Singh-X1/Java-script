@@ -20,19 +20,26 @@
 
   <script>
    let Compmove;
+
  
   </script>
 
 </head>
 <body style="background-color:rgb(88,88,88)">
  
-  <button onClick="Compmove=math.random();
+  <button onClick="Compmove=Math.random();
 
-  if(compmove)
+  if(Compmove>0 && Compmove<=0.33){
+    console.log('rock');
+  }else if(Compmove>0.33 && Compmove<=0.66){
+    console.log('paper');
+  }else{
+    console.log('Scissor');
+  }
   
   
   ">rock</button>
   <button>paper</button>
   <button>Scissor</button>
 </body>
-</html>
+</html
