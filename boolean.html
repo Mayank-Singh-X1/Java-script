@@ -43,11 +43,12 @@
     console.log('YOU WON');
   }else if(Compmove==='rock'){console.log('Draw');}
   else{console.log('You lose');
-}
- 
+}console.log('Computer move : '+Compmove);
   ">rock</button>
+
+
   <button onClick="
-  UserMove='rock';
+  UserMove='paper';
      Compmove=Math.random();
 
   if(Compmove>0 && Compmove<=0.33){
@@ -59,10 +60,30 @@
   }
 
   if(Compmove==='scissor'){
-    console.log('YOU WON');
-  }else if(Compmove==='rock'){console.log('Draw');}
-  else{console.log('You lose');
-}">paper</button>
-  <button>Scissor</button>
+    console.log('You loose');
+  }else if(Compmove==='rock'){console.log('You won');}
+  else{console.log('draw');
+}
+console.log('Computer move : '+Compmove);
+">paper</button>
+
+  <button onClick="
+  UserMove='scissor';
+     Compmove=Math.random();
+
+  if(Compmove>0 && Compmove<=0.33){
+    Compmove='rock';
+  }else if(Compmove>0.33 && Compmove<=0.66){
+    Compmove='paper';
+  }else{
+    Compmove='scissor';
+  }
+
+  if(Compmove==='scissor'){
+    console.log('Draw');
+  }else if(Compmove==='rock'){console.log('You loose');}
+  else{console.log('you won');
+}
+console.log('Computer move : '+Compmove);">Scissor</button>
 </body>
 </html
