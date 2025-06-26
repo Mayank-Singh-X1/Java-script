@@ -22,13 +22,7 @@
    let Compmove;
    let UserMove;
 
- 
-  </script>
-
-</head>
-<body style="background-color:rgb(88,88,88)">
- 
-  <button onClick="UserMove='rock';
+   function compMovefnc(){
      Compmove=Math.random();
 
   if(Compmove>0 && Compmove<=0.33){
@@ -38,6 +32,18 @@
   }else{
     Compmove='scissor';
   }
+
+   }
+
+ 
+  </script>
+
+</head>
+<body style="background-color:rgb(88,88,88)">
+ 
+  <button onClick="UserMove='rock';
+  compMovefnc();
+    
 
   if(Compmove==='scissor'){
     console.log('YOU WON');
@@ -49,15 +55,8 @@
 
   <button onClick="
   UserMove='paper';
-     Compmove=Math.random();
-
-  if(Compmove>0 && Compmove<=0.33){
-    Compmove='rock';
-  }else if(Compmove>0.33 && Compmove<=0.66){
-    Compmove='paper';
-  }else{
-    Compmove='scissor';
-  }
+   compMovefnc();
+    
 
   if(Compmove==='scissor'){
     console.log('You loose');
@@ -69,16 +68,8 @@ console.log('Computer move : '+Compmove);
 
   <button onClick="
   UserMove='scissor';
-     Compmove=Math.random();
-
-  if(Compmove>0 && Compmove<=0.33){
-    Compmove='rock';
-  }else if(Compmove>0.33 && Compmove<=0.66){
-    Compmove='paper';
-  }else{
-    Compmove='scissor';
-  }
-
+     compMovefnc();
+    
   if(Compmove==='scissor'){
     console.log('Draw');
   }else if(Compmove==='rock'){console.log('You loose');}
